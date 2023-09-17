@@ -1,0 +1,9 @@
+from django.shortcuts import render
+from polls.models import Question, Profile
+
+# Create your views here.
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
