@@ -2,12 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/x-icon" href="/mug-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>ToDo App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <body class="bg-stone-100">
+      <header class="max-w-lg py-4 mx-auto mt-5 font-thin text-center">
+        <h1 class="font-sans text-7xl text-rose-700">Study Buddy</h1>
+      </header>
+
+      <nav
+        id="nav-bar"
+        class="flex items-left justify-center gap-4 py-2 filters"
+        role="navigation"
+      >
+        <img class="h-16 w-16" src="/mug-logo.png" alt="notebook">
+        <a
+          href="#/"
+          class="p-1 underline underline-offset-4 decoration-rose-800 decoration-2"
+          role="button"
+          >Home</a
+        >
+        <a
+          href="#/create-account"
+          class="p-1 border-0 rounded-sm border-rose-700"
+          role="button"
+          >Create an Account</a
+        >
+        <a
+          href="#/study-buddy"
+          class="p-1 border-0 rounded-sm border-rose-700"
+          role="button"
+          >Study Buddy</a
+        >
+      </nav>
+
+      <main>
+        <section id="create-account" class="mx-4 lg:max-w-lg rounded-lg font-thin bg-white divide-y shadow-md flex flex-col items-center">
+          <h1 class="p-5 font-sans text-2xl text-center text-rose-700">Create Your Profile</h1>
+          <div id="create-profile" class="flex flex-col lg:flex-row">
+            <div id="profile-pic" class="lg:w-1/2 w-1/3 flex justify-center items-center">
+              <img class="rounded-full h-60 w-60 sm:w-32 sm:h-32 bg-rose-200" src="/mug-logo.png" alt="notebook">
+            </div>
+            <div class="lg:w-1/2 w-2/3 p-3">
+              <label for="new-name" class="block font-bold text-gray-700">Your Name:</label>
+              <input id="new-name" class="p-4 profile-item-edit mb-2" type="text" placeholder="Enter your name" />
+              
+              <label for="new-learning-style" class="block font-bold text-gray-700">Your Learning Style:</label>
+              <input id="new-learning-style" class="p-4 profile-item-edit mb-2" type="text" placeholder="Enter your learning style" />
+        
+              <label for="new-previous-experience" class="block font-bold text-gray-700">Previous Experience:</label>
+              <input id="new-previous-experience" class="p-4 profile-item-edit mb-2" type="text" placeholder="Enter prev. experience" />
+              
+              <label for="new-bio" class="block font-bold text-gray-700">Your Bio:</label>
+              <textarea id="new-bio" class="p-4 profile-item-edit mb-2" rows="4" placeholder="Write a short bio"></textarea>
+            </div>
+          </div>
+          <button id="submit-new-profile" class="mt-4 p-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900">Submit</button>
+        </section>
+              
+        
+      </main>
+
+      <!-- Scripts here. Don't remove ↓ -->
+      <script type="module" src="/src/main.js"></script>
+    </body>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
